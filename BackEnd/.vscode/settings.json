@@ -1,3 +1,14 @@
 {
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "cSpell.words": [
+    "camelcase",
+    "eslint",
+    "middlewares",
+    "readonly",
+    "tsyringe",
+    "typeorm",
+    "typescript",
+    "typescript eslint camelcase",
+    "uuidv"
+  ]
 }

@@ -2,14 +2,20 @@
   "git.ignoreLimitWarning": true,
   "cSpell.words": [
     "camelcase",
+    "equipe",
     "eslint",
     "mailson",
     "middlewares",
+    "o",
     "readonly",
+    "recupera",
+    "recuperação",
+    "senha",
     "tsyringe",
     "typeorm",
     "typescript",
     "typescript eslint camelcase",
-    "uuidv"
+    "uuidv",
+    "varchar"
   ]
 }

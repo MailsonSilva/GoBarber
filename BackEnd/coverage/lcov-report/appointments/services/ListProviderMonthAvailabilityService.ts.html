@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for users/services/SendForgotPasswordEmailService.ts</title>
+    <title>Code coverage report for appointments/services/ListProviderMonthAvailabilityService.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,27 +19,27 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">users/services</a> SendForgotPasswordEmailService.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">appointments/services</a> ListProviderMonthAvailabilityService.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/20</span>
+                <span class='fraction'>0/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
@@ -110,41 +110,8 @@
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,60 +129,96 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import {inject, injectable} from 'tsyringe';</span>
-<span class="cstat-no" title="statement not covered" >import path from 'path';</span>
-<span class="cstat-no" title="statement not covered" >import AppError from '@shared/errors/AppError';</span>
-import IUsersRepository from '@modules/users/repositories/IUsersRepository';
-import IMailProvider from '@shared/container/providers/MailProvider/models/IMailProvider';
-import IUserTokensRepository from '../repositories/IUserTokensRepository';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { inject, injectable } from 'tsyringe';</span>
+<span class="cstat-no" title="statement not covered" >import { getDaysInMonth, getDate } from 'date-fns';</span>
+import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 &nbsp;
 interface IRequest {
-  email: string;
-}
+  providerId: string;
+  month: number;
+  year: number;
+};
+&nbsp;
+type IResponse = Array&lt;{
+  day: number;
+  available: boolean;
+}&gt;;
 &nbsp;
 @injectable()
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >class <span class="cstat-no" title="statement not covered" >S</span></span>endForgotPasswordEmailService {</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >class <span class="cstat-no" title="statement not covered" >L</span></span>istProviderMonthAvailabilityService {</span>
 <span class="fstat-no" title="function not covered" >  constructor(</span>
-    @inject('UsersRepository')
-    private <span class="cstat-no" title="statement not covered" >usersRepository:IUsersRepository,</span>
-&nbsp;
-    @inject('MailProvider')
-    private <span class="cstat-no" title="statement not covered" >mailProvider:IMailProvider,</span>
-&nbsp;
-    @inject('UserTokensRepository')
-    private <span class="cstat-no" title="statement not covered" >userTokensRepository:IUserTokensRepository,</span>
+    @inject('AppointmentsRepository')
+    private <span class="cstat-no" title="statement not covered" >appointmentsRepository: IAppointmentsRepository,</span>
   ) {}
 &nbsp;
-<span class="fstat-no" title="function not covered" >  public async <span class="cstat-no" title="statement not covered" >e</span>xecute( {email<span class="cstat-no" title="statement not covered" >}: IRequest)</span>: Promise&lt;void&gt; {</span>
-    const <span class="cstat-no" title="statement not covered" >user =  <span class="cstat-no" title="statement not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >await this.usersRepository.findByEmail(email);</span></span></span>
+<span class="fstat-no" title="function not covered" >  public async <span class="cstat-no" title="statement not covered" >e</span>xecute({ providerId<span class="cstat-no" title="statement not covered" >, y</span>ear<span class="cstat-no" title="statement not covered" >, m</span>onth<span class="cstat-no" title="statement not covered" > }: IRequest)</span>: Promise&lt;IResponse&gt; {</span>
+    const <span class="cstat-no" title="statement not covered" >appointments = <span class="cstat-no" title="statement not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >await this.appointmentsRepository.findAllInMonthFromProvider({</span></span></span>
+      providerId,
+      year,
+      month,
+    });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!user){</span>
-<span class="cstat-no" title="statement not covered" >      throw new AppError('User does not exists.');</span>
-    }
+    const  <span class="cstat-no" title="statement not covered" >numberOfDaysInMonth = getDaysInMonth(</span>
+      new Date(year, month - 1),
+    );
 &nbsp;
-    const {<span class="cstat-no" title="statement not covered" >token} = <span class="cstat-no" title="statement not covered" >a</span>wait this.userTokensRepository.generate(user.id);</span>
+    const <span class="cstat-no" title="statement not covered" >eachDayArray = Array.from(</span>
+      {length: numberOfDaysInMonth},
+<span class="fstat-no" title="function not covered" >      (_</span>, index) =&gt; <span class="cstat-no" title="statement not covered" >index + 1,</span>
+    );
 &nbsp;
-    const <span class="cstat-no" title="statement not covered" >forgotPasswordTemplate = path.resolve(__dirname, '..', 'views', 'forgot_password.hbs');</span>
+    const <span class="cstat-no" title="statement not covered" >availability = eachDayArray.map(<span class="fstat-no" title="function not covered" >day </span>=&gt; {</span>
+      const appointmentsInDay = <span class="cstat-no" title="statement not covered" >appointments.filter(<span class="fstat-no" title="function not covered" >appointment </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return getDate(appointment.date) === day</span>
+      });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    await this.mailProvider.sendMail({</span>
-      to: {
-        name: user.name,
-        email: user.email,
-      },
-      subject: '[GoBarber] Recuperação de senha',
-      templateData: {
-        file: forgotPasswordTemplate,
-        variables:{
-          name: user.name,
-          link: `http://localhost:3000/reset_password?token=${token}`,
-        },
-      },
-    })
+<span class="cstat-no" title="statement not covered" >      return{</span>
+        day,
+        available: appointmentsInDay.length &lt; 10,
+      };
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return availability;</span>
   }
 <span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >export default SendForgotPasswordEmailService;</span>
+<span class="cstat-no" title="statement not covered" >export default ListProviderMonthAvailabilityService;</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

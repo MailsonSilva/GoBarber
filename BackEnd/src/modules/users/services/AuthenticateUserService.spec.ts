@@ -3,23 +3,24 @@ import AppError from '@shared/errors/AppError';
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 import FakeHashRepository from '../providers/HashProvider/fakes/FakeHashProvider';
 import AuthenticateUserService from './AuthenticateUserService';
-import CreateUserService from './CreateUserService';
+import FakeCacheProvider from '@shared/container/providers/CacheProvider/fakes/FakeCacheProvider';
 
 let fakeUsersRepository: FakeUsersRepository;
 let fakeHashRepository: FakeHashRepository;
-let createUser: CreateUserService;
 let authenticateUser: AuthenticateUserService;
+let fakeCacheProvider: FakeCacheProvider;
 
 describe('AuthenticateUser', () => {
   beforeEach(()=>{
     fakeUsersRepository = new FakeUsersRepository();
     fakeHashRepository = new FakeHashRepository();
-    createUser = new CreateUserService(fakeUsersRepository, fakeHashRepository);
+    fakeCacheProvider = new FakeCacheProvider();
+
     authenticateUser= new AuthenticateUserService(fakeUsersRepository, fakeHashRepository);
   })
 
   it('should be able to authenticate', async() => {
-    const user = await createUser.execute({
+    const user = await fakeUsersRepository.create({
       name: 'Mailson',
       email: 'mailson@davi.com',
       password: '123456'
@@ -43,11 +44,11 @@ describe('AuthenticateUser', () => {
   });
 
   it('should not be able to authenticate with wrong password', async() => {
-    await createUser.execute({
+    fakeUsersRepository.create({
       name: 'Mailson',
       email: 'mailson@davi.com',
       password: '123456'
-    });
+    })
 
     await expect(
       authenticateUser.execute({

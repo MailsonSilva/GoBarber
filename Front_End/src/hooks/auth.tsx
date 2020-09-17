@@ -1,20 +1,26 @@
 import React, { createContext, useCallback, useState, useContext } from 'react';
 import api from '../services/api';
 
-interface SignInCredencial {
+interface User {
+  id: string;
+  name: string;
+  avatar_url: string;
+}
+
+interface SignInCredentials {
   email: string;
   password: string;
 }
 
 interface AuthContextData {
-  user: object;
-  signIn(credencial: SignInCredencial): Promise<void>;
+  user: User;
+  signIn(credencial: SignInCredentials): Promise<void>;
   signOut(): void;
 }
 
 interface AuthState {
   token: string;
-  user: object;
+  user: User;
 }
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);

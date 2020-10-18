@@ -153,7 +153,7 @@ const CreateAppointment: React.FC = () => {
     } catch (error) {
       Alert.alert(
         'Erro ao criar agendamento',
-        'Ocorreu um erro ao tentar criar um agendamento, tente novamente',
+        'Ocorreu um erro ao tentar criar um agendamento, tente novamente.',
       );
     }
   }, [selectedProvider, selectedDate, selectedHour, navigate]);
@@ -203,7 +203,6 @@ const CreateAppointment: React.FC = () => {
               mode="date"
               display="calendar"
               onChange={handleDateChanged}
-              textColor="#f4ede8"
               value={selectedDate}
             />
           )}
@@ -218,7 +217,7 @@ const CreateAppointment: React.FC = () => {
             <SectionContent>
               {morningAvailability.map(({ hourFormatted, hour, available }) => (
                 <Hour
-                  enable={available}
+                  enabled={available}
                   selected={selectedHour === hour}
                   available={available}
                   key={hourFormatted}
@@ -239,7 +238,7 @@ const CreateAppointment: React.FC = () => {
               {afternoonAvailability.map(
                 ({ hourFormatted, hour, available }) => (
                   <Hour
-                    enable={available}
+                    enabled={available}
                     selected={selectedHour === hour}
                     available={available}
                     key={hourFormatted}

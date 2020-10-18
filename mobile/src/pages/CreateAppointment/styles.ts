@@ -17,7 +17,7 @@ interface HourProps {
 }
 
 interface HourTextProps {
-  available: boolean;
+  selected: boolean;
 }
 
 export const Container = styled.View`

@@ -8,13 +8,10 @@ export const Container = styled.View`
 `;
 
 export const BackButton = styled.TouchableOpacity`
-  margin-top: 20px;
-  padding: 10px;
+  margin-top: 15px;
 `;
 
-export const UserAvatarButton = styled.TouchableOpacity`
-  margin-top: -30px;
-`;
+export const UserAvatarButton = styled.TouchableOpacity``;
 
 export const Title = styled.Text`
   font-size: 20px;
@@ -24,9 +21,9 @@ export const Title = styled.Text`
 `;
 
 export const UserAvatar = styled.Image`
-  width: 186px;
-  height: 186px;
-  border-radius: 98px;
-  margin-top: 64px;
+  width: 176px;
+  height: 176px;
+  border-radius: 90px;
+  margin-top: 26px;
   align-self: center;
 `;

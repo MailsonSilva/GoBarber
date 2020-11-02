@@ -1,6 +1,5 @@
 import React, { useRef, useCallback } from 'react';
 import {
-  Image,
   ScrollView,
   View,
   KeyboardAvoidingView,
@@ -12,6 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
+import ImagePicker from 'react-native-image-picker';
 
 import * as Yup from 'yup';
 import api from '../../services/api';
@@ -37,7 +37,7 @@ interface ProfileFormData {
 }
 
 const Profile: React.FC = () => {
-  const { user, updateUser } = useAuth();
+  const { user, updateUser, signOut } = useAuth();
 
   const formRef = useRef<FormHandles>(null);
   const emailnputRef = useRef<TextInput>(null);
@@ -120,9 +120,47 @@ const Profile: React.FC = () => {
     [navigation, updateUser],
   );
 
+  const handleUpdateAvatar = useCallback(() => {
+    ImagePicker.showImagePicker(
+      {
+        title: 'Selecione um avatar',
+        cancelButtonTitle: 'Cancelar',
+        takePhotoButtonTitle: 'Usar câmera',
+        chooseFromLibraryButtonTitle: 'Abrir galeria',
+      },
+      response => {
+        if (response.didCancel) {
+          return;
+        }
+        if (response.error) {
+          Alert.alert('Erro ao atualizar sua foto de perfil.');
+          return;
+        }
+
+        const data = new FormData();
+
+        data.append('avatar', {
+          uri: response.uri,
+          type: 'image/jpeg',
+          name: `${user.id}.jpg`,
+        });
+
+        api
+          .patch('users/avatar', data)
+          .then(apiResponse => {
+            updateUser(apiResponse.data);
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      },
+    );
+  }, [updateUser, user.id]);
+
   const handleGoBack = useCallback(() => {
-    navigation.goBack();
-  }, [navigation]);
+    // navigation.goBack();
+    signOut();
+  }, [signOut]);
 
   return (
     <>
@@ -138,7 +176,7 @@ const Profile: React.FC = () => {
               <Icon name="chevron-left" size={36} color="#999591" />
             </BackButton>
 
-            <UserAvatarButton onPress={() => {}}>
+            <UserAvatarButton onPress={handleUpdateAvatar}>
               <UserAvatar source={{ uri: user.avatar_url }} />
             </UserAvatarButton>
 
